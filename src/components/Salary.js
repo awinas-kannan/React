@@ -11,7 +11,7 @@ export class Salary extends React.Component {
   {
     
     let newSalary = parseInt(this.refs.basic.value)+parseInt(this.refs.hra.value)+parseInt(this.refs.sa.value);
-    alert('salary updation called' + newSalary)
+    alert('salary updation called ' + newSalary)
     this.props.callbackFunction(newSalary);
     
   }

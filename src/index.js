@@ -182,7 +182,7 @@ class Counter extends React.Component {
     })
   }
   render() {
-    //alert('Render');
+    alert('Render');
     return (
       <div>
         <p>Click to Increase Couter </p>
@@ -194,7 +194,7 @@ class Counter extends React.Component {
   }
 }
 const counterComp = <Counter></Counter>
-ReactDOM.render(counterComp, document.getElementById('root'));
+//ReactDOM.render(counterComp, document.getElementById('root'));
 
 
 class CountChars extends React.Component {
@@ -252,7 +252,7 @@ const AppContextInteration = <App></App>
 
 const empListFC = <DisplayEmployeeList></DisplayEmployeeList>
 
-//ReactDOM.render(empListFC, document.getElementById('root'));
+ReactDOM.render(empListFC, document.getElementById('root'));
 
 //11.Rest Api call - window fetch
 

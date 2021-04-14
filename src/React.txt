@@ -106,7 +106,8 @@ class component can be used for follwing cases.
 //Read async behavious of state laterr ...
 //read dynamic object key in js ..
 //dynamic key value in setState -- https://stackoverflow.com/questions/29280445/reactjs-setstate-with-a-dynamic-key-name | https://medium.com/@bretdoucette/understanding-this-setstate-name-value-a5ef7b4ea2b4
-since props in react are read only we use state
+
+since props in react are read only we use state.
 state in react comopnent is used in manipulating the values dynamically.
 (((((whenever the state val is changes , the component is re - renderedd))))
 #this keyword work in arrow function.
@@ -120,17 +121,21 @@ increaseCounter=()=>
  7:Interaction between component
  Ui may consis of multiplle components.One component interactiong with other
  
- #Sharing between parent to child and child to parent
- 
- 8:React component communication using context
- 
- ***data sharing between components using CONTEXT 
+ #Sharing data between parent to child and child to parent
+***Using call back funtion & state . Send the call back function which has state change to child component
+
+ 8:React component communication using context:
+
+ export const employeeContext = React.createContext();
+ static contextType = employeeContext;
+
+ ***data sharing between components using CONTEXT .
 context is used when data is to be accessible by components at different nesting levels 
 
 *Context provider accepts the value property throught which
 data can be passed to components that are descendents of this provider
 
-*Descendents of provider will render when ever the provider calues changes
+*Descendents of provider will render whenever the provider values changes
 
 
  9:
@@ -138,7 +143,8 @@ data can be passed to components that are descendents of this provider
  
  10:
  Listing in react 
-	  
+ empList.map((emp) =>
+        <Employee key={emp.EmpId} data={emp}></Employee>);  
 	  
 11,12.Rest api call 
 *Jquery ajax
