@@ -1,0 +1,518 @@
+1:
+
+*Opensource js library user for Interactive & Dynamic UI creation
+*Front end for mobile and web apps
+*React - native for android & ios apps | mobile apps
+
+React Benefits ---
+*Virtual dom
+*components  ( combinaion of template wiht html ,applying styles  css, user interactivity with js)
+*JSX js syntax extension
+*one way data binding
+
+React vs react native :
+syntax and work flow ll be same but the components ll differ
+
+
+2: First React APp
+
+Node js: runtime env to execute js code outside browser
+Npm : installed along with js 
+
+install Create React App :
+npm install -g create-react-app
+
+create a new react app:
+
+create-react-app demo-proj
+
+Run the proj:
+
+npm start
+
+
+codepen.io 
+https://unpkg.com/react/umd/react.document.js
+https://unpkg.com/react-dom/umd/react-dom.document.js
+
+
+
+3 : React Elements :
+
+An react elemet can be created with JSX or Without JSX
+
+Code writen with JSX is compiled to pure java script using Babel compiler ( codepen )
+
+###react element is created using react.createElement (element type , elementproperty (css property) , childern of that element);
+
+const devElemWithoutJSX = React.createElement("div", { className: "customBorder" },
+React.createElement("h1", null, "Welcome to react without JSX"),
+React.createElement("h1", null, "Understandong creation of elements  without JSX"));
+ReactDOM.render(devElemWithoutJSX, document.getElementById('root'));
+
+4: React Components || Function components
+
+
+Components - building block of react app
+
+*independent and reusable pieces . (Functions)
+*Always Start a react component name with Capital letter. Otherwise it will not be  displayed
+*React treats comonent that start with lower case letter as DOM tags. <div> , <h1>
+
+ *When react sees a element with user defined component then it passes jsx attribures as single object to components.
+ 
+5:React components | Class components
+
+*render is the only method that is to be use in class component
+
+*properties are read only in react
+
+Function vs class component:
+
+class component can be used for follwing cases.
+  # Managing state of component
+  # Add lifecycle of component
+  # Logic for event handlers
+
+
+6: State in React Class component
+//Read async behavious of state laterr ...
+//read dynamic object key in js ..
+//dynamic key value in setState -- https://stackoverflow.com/questions/29280445/reactjs-setstate-with-a-dynamic-key-name | https://medium.com/@bretdoucette/understanding-this-setstate-name-value-a5ef7b4ea2b4
+since props in react are read only we use state
+state in react comopnent is used in manipulating the values dynamically.
+(((((whenever the state val is changes , the component is re - renderedd))))
+#this keyword work in arrow function.
+increaseCounter=()=>
+   {
+     this.counter=this.counter+1;
+     alert('Increased value = ' + this.counter);
+   }
+
+
+ 7:Interaction between component
+ Ui may consis of multiplle components.One component interactiong with other
+ 
+ #Sharing between parent to child and child to parent
+ 
+ 8:React component communication using context
+ 
+ ***data sharing between components using CONTEXT 
+context is used when data is to be accessible by components at different nesting levels 
+
+*Context provider accepts the value property throught which
+data can be passed to components that are descendents of this provider
+
+*Descendents of provider will render when ever the provider calues changes
+
+
+ 9:
+ changin state value of parent from child using context
+ 
+ 10:
+ Listing in react 
+	  
+	  
+11,12.Rest api call 
+*Jquery ajax
+*Axios
+*window fetch
+
+ componenetdidmount() - Life cycle method
+--Read https://stackoverflow.com/questions/36049493/when-exactly-is-componentdidmount-fired
+--here fetch is used
+//Mounting in react  -set of code to be executed whenever the component is rendered 
+//we declare special methods on component classes to run some code whenever a component is mounted
+//the methods are called life cycle method
+
+
+13: React Form
+
+//read https://stackoverflow.com/questions/47012169/a-component-is-changing-an-uncontrolled-input-of-type-text-to-be-controlled-erro
+*Uncontrolled input or components //input elemets handed by setstate
+*controlled input or componenets  //input elemets handeld by react dom // using refs
+
+** We get all previous values using spread operatior (...)
+
+Formik library ::: used for form validation ..  || this is made up of controlled components * states
+### npm install formik --save
+1: get form values
+2: Form validation 
+3: Handling Form submission
+
+((((((Function component cannot have refs))))))
+
+14:Form validation
+
+ onBlur={formik.handleBlur} // validation done when tab to next input
+ 
+ fromik.touched.id // error will be shown if and only if the input element id is touched  //visited field
+
+	 
+--npm install yup --save || other lib  for form validation	 
+
+15:Understanding Formik forms
+
+Formik Components :
+ Formik 
+ Field
+ Form
+ Error Message
+internally it used useFormik to form components
+
+16:Lifting state
+
+state is lifted  and placed in parent component
+and shared to childs
+ 
+ 
+17: Error Boundries  || 
+||spectific component can be wrapped or top level component can be wrapped for error boundry 
+ Error Boundries   catch js error anywhere in child component tree.log those erros 
+ 
+A class component becomes a error boundy if it has one of the two lifecycle methods>.....
+Lifecycle methods to handle error
+*static getDerivedStateFromError() //render fall back UI after err thrown
+*componentDidCatch() //logs error info
+
+//Error boundry do not catch
+*event handler error (onclick,onchange)
+*server side rendering code
+*any async code (setTimeout)
+
+18:Fragments in React
+Every component class returns one container (div) || JSX expression must have one parent elemet
+
+This can be over come by React fragments
+<React.Fragment> </React.Fragment> or <> </>
+
+*fragment supporys one attribute (key attribute) which is used when mapping collection to array of component..
+
+19:Refs in React
+
+**without using refs each time the component is rendered on  button click  \\ used state for changing the values
+Warning: Failed prop type: You provided a `value` prop to a form field without an `onChange` handler. This will render a read-only field. If the field should be mutable use `defaultValue`.
+Otherwise, set either `onChange` or `readOnly`. in input (at WithoutRefs.js:23)
+
+**refs can be defined either in compponentDidMount () or constructor
+React.CreateRef();
+
+** this.name.current.value  ||current.value is used to fetch the value using refs ||Note: we're accessing "current" to get the DOM node
+//video player example skippes
+
+20:Refs continued // refs forwaring ||| too much doubts
+
+Ref forwarding is a technique for automatically passing a ref through a component to one of its children.
+
+**Refs cannot be created in function component as they do not have instance.
+**forward Ref can be used to assing ref to a function component
+
+21:Higher order components
+A Higher-Order component (HOC) is an advanced technique in React for reusing component logic
+Higher Order Components promote Code Reusability
+
+//  Line 68:29:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
+//chnage { to ( in map
+
+22: Portals
+Portals provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of the parent component.
+
+Normally, when you return an element from a component’s render method, it’s mounted into the DOM as a child of the nearest parent node. 
+
+However, sometimes it’s useful to insert a child into a different location in the DOM.
+
+when to use portel ?
+wheneven a content of specific component need to be rendered out side current container,
+like showing tool tip, popup ,modal popup,new window then we use portal.
+
+Remember that Even though a portal can be anywhere in the DOM tree, it behaves like a normal React child in every other way.
+ Features like context work exactly the same regardless of whether the child is a portal, as the portal still exists in the React tree regardless of position in the DOM tree.
+
+This includes event bubbling. An event fired from inside a portal will propagate to ancestors in the containing React tree, even if those elements are not ancestors in the DOM tree.
+
+23:Profiler 
+
+The Profiler measures how often a React application renders and what the “cost” of rendering is.
+Its purpose is to help identify parts of an application that are slow so that we can work on optimizing them. 
+
+***initial render === mount
+***re-render ==== update
+***Profiler will not be enabled in production
+
+24: Render props in react
+
+//Code reuseability
+
+
+The term “render prop” refers to a technique for sharing code between React components using a prop whose value is a function
+A component with a render prop takes a function that returns a React element and calls it instead of implementing its own render logic.
+
+
+**in the example the listing logic is seperated  and maintned in seperate class
+**we used a common function called render to display the datas
+**In both class components list are passed in different way .. one through props and other through state
+
+25:Pure Components // compared based on address not based on value
+
+PureComponent is similar to Component.
+The difference between them is that Component doesn’t implement shouldComponentUpdate(), 
+but PureComponent implements it with a shallow comparison of properties and state data.
+
+PureComponent’s shouldComponentUpdate() method returns true or false  
+If the previous state and props data is the same as the next props or state, resulting the component is not Re-rendered.
+
+If our React component’s render() function renders the same result given the same props and state, we can use React.PureComponent for a performance boost
+
+
+React Components re-renders in the following scenarios:
+
+1. “setState” is called in Component
+
+2. “props” values are updated
+
+3. this.forceUpdate() is called
+
+Shallow comparision ??
+
+let emp={
+Id:101,
+Name:’Pragim’};
+
+let emp1={
+Id:101,
+Name:’Pragim’}
+
+shallow comparision returns false
+
+let emp={
+Id:101,
+Name:’Pragim’};
+
+let emp1=emp; 
+shallow comaprision returns true.
+
+
+26:: Component Life cycle methods https://www.pragimtech.com/blog/reactjs/component-lifecycle-methods-in-react/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%IMportant%%%%%%%%%%%%%%%%%%%
+***Order of loading : constructor > render > componentDidMount > (new component is loaded) > prev     componentWillUnmount() 
+1.Constructor :
+The constructor of a React component is called before it is mounted
+
+2.render() :
+The render() method is the only required method in a class component. Output of a Component is dependent on what we return from this method
+Render method returns one of the following types:
+
+• React elements
+• Arrays and fragments. 
+•  Portals
+• String and numbers. 
+• Booleans or null. 
+
+3:componentDidMount
+It is invoked immediately after a component is mounted (inserted into the tree)
+
+4componentWillUnmount() 
+it is invoked immediately before a component is unmounted and destroyed. 
+
+
+27: Hooks An alternate for components https://www.pragimtech.com/blog/reactjs/introduction-to-hooks-in-react/
+**Class compoents have several dis advatages .so hook were introduced in 16.8 version
+1. Wrapper Hell
+2. Huge Components
+3. Confusing Classes	
+4. classes don’t minify very well
+
+**In normal funciton components we cannot maintain states , but in class components we can manage states.
+
+Hooks are functions that let you “hook into” React state and lifecycle features from function components.
+Hooks don’t work inside classes — they let you use React without classes
+
+Some Basic Hooks 
+• useState
+• useEffect
+• useContext
+
+28: useState in React 
+
+const [employee, setEmployeeData] = useState({ Id: '', Name: '', Location: '', Salary: '' });
+
+useState return two values.
+1:employee (state value)   
+2:setEmployeeData // our custom function to manipulate state value
+
+29:Sharing state between funciton components .. useState between components
+
+passing state between parent & child
+
+30:useEffect  // executed once dom is ready
+
+useEffect is a function that runs when the component is first rendered, and on every subsequent re-render/update
+We can think of useEffect Hook as componentDidMount, componentDidUpdate, and componentWillUnmount combined.
+
+So where should we write the code which should get executed after our DOM is ready. 
+This is where we will make use of another hook in React called as useEffect. 
+
+useEffect(loadDatas, []);
+what is the  use of [] in useEffect???????????
+When the DOM is ready, we are sending the API request, getting the employees data and updating our employees state variable
+by calling setEmployees method. But this has a Problem. Remember that when there is any change in the properties data or state data of a component, 
+then that component gets re-rendered. 
+
+Resulting our useEffect function gets called again. It will send an API request,
+get the data and assign it to employees state variable. That will make the component gets re-rendered and it will go into infinite loop. 
+
+If you want to run an effect only once (on mount and unmount), you can pass an empty array ([]) as a second argument. 
+This tells React that your effect doesn’t depend on any values from props or state, so it never needs to re-run.
+
+31:useEffect //  UseEffect with state dependency
+
+We can pass the state variable as a dependency to our useEffect hook.
+Our useEffect hook can have dependency on multiple state variables or properties as well.
+
+//This means that only for searchText state change , useEffect wil be called again....
+useEffect(loadDatas, [searchText]);
+
+32: useEffect
+
+Multiple effects declared in component will be executed in order
+
+@@@@@return method in useEffect is similar to componentWillUnmount@@@@@
+Any Clean up code we wanted to be executed when the Component is Unmounted, we will write it in a function and we will return that function from our effect.
+
+//Add new employee in h2 console and check
+
+Whenever these is a change in state value ,component will be re-rendered..
+If the employye counts remaines the same, there wont be any change in state so it wont be re-renderd
+If the employee count changes ,then the whole component will be re-renderd
+
+
+*First emploeye use effect is called , here we have setInterVal for 5 seconds , so it wont call rest Api till 5 seconds and 
+	there wont be  any state change on employeeCount state variable till 5 second
+*then  laptop use effect is called , it fetchs data from rest Api since it dont have time interval set, and then it sets the value to noOfLaptops state variable.. 
+	since the state variabel is changed , the components rerenders ..........
+
+**At re-rendering ,  employee useEffect is called , it wont have reached 5 sec so nothing happens
+**then it call laptop useEffect , here the count returned is came so no state chages happens.. and no re-rendeing till 5 sec..
+
+After 5 seconds ,
+employee count state variable value changes so the component re-renders and employee count is shwn in UI..
+After another 5 secs..
+again employee count is called , since the count returned is same .. no rerendering happenss..
+
+If we manually update some value in employye table in h2-console, the employee count chnages and component re-rendering happens....
+
+
+
+33,34 : useContext ... Context value wil be availabe for all descendents
+
+https://www.pragimtech.com/blog/reactjs/usecontext-hook-in-react
+https://www.pragimtech.com/blog/reactjs/usecontext-part-2-in-react/
+
+
+35: Custom hooks-in-react
+
+For Code Reusability in class components , We used HOC or renderPorps
+
+What if if we want to reuse the code between function components ??????
+
+@@
+A custom Hook is a JavaScript function whose name starts with ”use” and that may call other Hooks.
+It is a convention that we will start the hook name with use else we will be violating the rules of Hooks.
+@@
+
+One hook can be used by multiple components as we have seen here, and every time we use a custom Hook, 
+all state and effects inside of it are fully independent from one component to the other component.
+
+36:Importing our custom HOOK from Npm
+
+37:Rounting in React
+npm install react-router-dom
+
+To implement  navigation within the single page of our application, we use the concept of Routing.
+
+Routing enables navigation from one view to the next view (within the same page) as users perform different tasks.
+
+Browse Rouner
+Link - > > anchor tag equivalent
+
+Route -> > based on the url in Link tag , correspoding Route tag ll be shown
+
+Prompt >> Upcoming tutorials (44)
+
+Redirect >> Upcoming tutorials (44)
+ 
+38:Switch component in react router
+exact in <Route>  keyword matched exact path
+https://www.pragimtech.com/blog/reactjs/routing-part-2-in-react/
+
+<Switch>-- like switch case
+
+with out switch , the router will check all the Route component even if it finds the first match.
+to avoid this switch is used..if two route component has same url ,both will be displayed
+
+To display employee by default we can assign / to employee router..
+without switch if we click project or laptop , it will  display two (employee, the clicked component) components because , every url starts with / .. {/laps , / projects}
+
+39.React NavLink Component and Importance of Routes Order
+
+React Router Provides another Component Called as NavLink which is a 
+special type of <Link> that can style itself as “active” when its to property value matches the current location.
+
+activeClassName='links' cannot be used in <Link>.. ONly be used in <NavLink>
+
+IF we directly give a url likethe end url is not present , then default 'page not found' has to be displayed..
+http://localhost:3000/aaa
+
+If the directly entered is correct ,then that particular comp will be displayed :http://localhost:3000/laps
+
+40::React Url params
+*Add edit button to each row and clicking on that show data in seperate component..
+
+/employee/:id :== dyamic url --> can be retrived in components using {props.match.params.id}
+
+41: React Nested Url 
+
+check console.log(props) --  props: location, match, and history.
+
+42 :Programmatic navigation 
+@@@check fully - Important@@@
+https://www.pragimtech.com/blog/reactjs/routing-part-6-in-react/
+
+History object has several properties and methods in it related to routing. One of the method is Push using which we can Push a new entry onto the history stack
+Replace- This method Replaces the current entry on the history stack. 
+
+Login with correct credentials -> hom comopnent next button (used replace method of history object)- > edit profile page will be displayed
+As we have used replace method, which replaces the history stack. Click on Back button, 
+one can observe that we have been navigated to the Login Component but not to home component. 
+
+** props.history.push('/home'); / this navigates to the home component
+** props.history.replace('/editprofile');
+
+**When directly loaded from url : action = 'POP'
+**When click in links : action ='PUSH'
+
+43 : Protected Routes
+
+{...data} contains Route  properties  (history ,location ,match ) .. @@@@@ check logs
+
+44 : Prevent Navigation
+
+In edit profile .If The Save button is clicked , then navigation should be permitted.
+otherwise  if there are some unsaved changes it will prompt .. whether need to navigate to other link...
+
+ <Prompt when={isDataChanged}
+                message={() => "There are Some Unsaved Changes. Do you want to go Away?"}></Prompt>
+
+ When prompt windows is shown . There ll be two optoins
+ OK or cancel .. Clicking on OK nav to other page. Cancel -> remains in the same page
+ 
+
+ 45 :
+
+
+
+
+
+
+
+
