@@ -392,7 +392,7 @@ const multipleInputHandleThroughState = <><MultipleImputStateHandler /> </>
 //ReactDOM.render(<BrowserRouter><ProgramaticNavigatorWithProtectedRoute/></BrowserRouter>, document.getElementById("root"));
 
 //44 Prevent Navigation
-ReactDOM.render(<BrowserRouter><PreventNavigator/></BrowserRouter>, document.getElementById("root"));
+//ReactDOM.render(<BrowserRouter><PreventNavigator/></BrowserRouter>, document.getElementById("root"));
 
 
 

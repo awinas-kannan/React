@@ -2,34 +2,51 @@
 
 *Opensource js library user for Interactive & Dynamic UI creation
 *Front end for mobile and web apps
-*React - native for android & ios apps | mobile apps
+*React-native for android & ios apps | mobile apps
+
+Pre requisites : HTML , JS ( ES6 -- let , const , arrow functions) , Baic of node  , NPM
 
 React Benefits ---
 *Virtual dom
-*components  ( combinaion of template wiht html ,applying styles  css, user interactivity with js)
-*JSX js syntax extension
-*one way data binding
+*components  ( combinaion of template with html ,applying styles  css, user interactivity with js () Header compoment, foter component , navigation componet , button component......)
+*JSX - js syntax extension ( Not that much imp)
+*Performace - 4
+*one way data binding (Uni direction data flow)
 
 React vs react native :
 syntax and work flow ll be same but the components ll differ
 
 
 2: First React APp
-
+Node -v -> Node Version ( 12.18.3)
+npm -v -> Npm version (6.14.6)
 Node js: runtime env to execute js code outside browser
 Npm : installed along with js 
 
-install Create React App :
+Open node js cmd prompt:
+* )install Create React App : (g -> global)
 npm install -g create-react-app
+C:\Users\AWINAS\AppData\Roaming\npm\node_modules\create-react-app\index.js
 
-create a new react app:
+*) Navigate to new folder for react:
+A:\ReactApps
+create a new react app:no caps in project name
 
-create-react-app demo-proj
+command ::  create-react-app demo-proj
+Src /public / node_module -> three imp folders
 
-Run the proj:
+*) Run the proj:
+Goto project folder ->A:\ReactApps\first-react-app
 
-npm start
+command :: npm start
 
+In public folder , there is file called index.html which has <div id="root"></div>
+Every thing will be renderd in this div
+
+This below line (in index.js ) is responsible for rendering 
+in that div
+ReactDOM.render(multiElem, document.getElementById('root'));
+Here multiElem is an Element(js file) imported in index.js file
 
 codepen.io 
 https://unpkg.com/react/umd/react.document.js
@@ -38,6 +55,10 @@ https://unpkg.com/react-dom/umd/react-dom.document.js
 
 
 3 : React Elements :
+
+Some important imports :
+import React, { PureComponent } from 'react';
+import ReactDOM from 'react-dom';
 
 An react elemet can be created with JSX or Without JSX
 
@@ -50,14 +71,19 @@ React.createElement("h1", null, "Welcome to react without JSX"),
 React.createElement("h1", null, "Understandong creation of elements  without JSX"));
 ReactDOM.render(devElemWithoutJSX, document.getElementById('root'));
 
+Babel compiler : Converting JSX into pure java script
+
+
 4: React Components || Function components
 
+React Components :Combination of Template using Html , User interactivity using js , styling (css)
 
 Components - building block of react app
 
 *independent and reusable pieces . (Functions)
+
 *Always Start a react component name with Capital letter. Otherwise it will not be  displayed
-*React treats comonent that start with lower case letter as DOM tags. <div> , <h1>
+*React treats component that start with lower case letter as DOM tags. <div> , <h1>
 
  *When react sees a element with user defined component then it passes jsx attribures as single object to components.
  
@@ -66,6 +92,7 @@ Components - building block of react app
 *render is the only method that is to be use in class component
 
 *properties are read only in react
+Assigning a new value to prop is not possible
 
 Function vs class component:
 
