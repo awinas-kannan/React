@@ -5,6 +5,7 @@ export class WithReff extends React.Component {
     constructor(props) {
         super(props);
         this.quantity = React.createRef();
+        
     }
 
     increment = () => {

@@ -14,6 +14,7 @@ export class ShowAllEmployees extends React.Component {
     //https://github.com/AWINAS-KANNAN-2719/SprinBootRemote
     componentDidMount()
     {
+        alert('componentDidMount')
         fetch('http://localhost:8080/getAllEmployee').then((result)=>result.json()).then((emp)=> {
             this.setState({
                 employees:emp
@@ -21,6 +22,12 @@ export class ShowAllEmployees extends React.Component {
         });
     }
 
+    clearall= () => {
+        alert('clear all called')
+        this.setState({
+            employees:[]
+        });
+    }
     render() {
         return (
             <div>
@@ -40,6 +47,7 @@ export class ShowAllEmployees extends React.Component {
                     )}
                 </tbody>
             </table>
+            <button onClick={this.clearall} >chage state to check component didmount</button>
             </div>
         )
     }

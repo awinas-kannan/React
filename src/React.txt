@@ -143,6 +143,7 @@ data can be passed to components that are descendents of this provider
  
  10:
  Listing in react 
+Add key to identity if any data change
  empList.map((emp) =>
         <Employee key={emp.EmpId} data={emp}></Employee>);  
 	  
@@ -154,7 +155,7 @@ data can be passed to components that are descendents of this provider
  componenetdidmount() - Life cycle method
 --Read https://stackoverflow.com/questions/36049493/when-exactly-is-componentdidmount-fired
 --here fetch is used
-//Mounting in react  -set of code to be executed whenever the component is rendered 
+//Mounting in react  -> set of code to be executed whenever the component is rendered 
 //we declare special methods on component classes to run some code whenever a component is mounted
 //the methods are called life cycle method
 
@@ -162,16 +163,19 @@ data can be passed to components that are descendents of this provider
 13: React Form
 
 //read https://stackoverflow.com/questions/47012169/a-component-is-changing-an-uncontrolled-input-of-type-text-to-be-controlled-erro
-*Uncontrolled input or components //input elemets handed by setstate
-*controlled input or componenets  //input elemets handeld by react dom // using refs
+Form input types ::::::: 
+*controlled input or components //input elemets handed by setstate
+*uncontrolled input or componenets  //input elemets handeld by react dom // using refs
 
 ** We get all previous values using spread operatior (...)
 
-Formik library ::: used for form validation ..  || this is made up of controlled components * states
+Formik library ::: used for form validation ..  || this is made up of control led components * states
 ### npm install formik --save
 1: get form values
 2: Form validation 
 3: Handling Form submission
+
+import { useFormik } from 'formik';
 
 ((((((Function component cannot have refs))))))
 
@@ -179,10 +183,13 @@ Formik library ::: used for form validation ..  || this is made up of controlled
 
  onBlur={formik.handleBlur} // validation done when tab to next input
  
- fromik.touched.id // error will be shown if and only if the input element id is touched  //visited field
+ fromik.touched.id // error will be shown if and only if the input element id is touched  //visited field //user touch the input field takes the focus out
 
 	 
 --npm install yup --save || other lib  for form validation	 
+
+{...formik.getFieldProps('id')} -> insteady of typing onBlur , onChnage ,value ..
+
 
 15:Understanding Formik forms
 
@@ -192,6 +199,7 @@ Formik Components :
  Form
  Error Message
 internally it used useFormik to form components
+This internally uses react context to share data
 
 16:Lifting state
 
@@ -201,12 +209,14 @@ and shared to childs
  
 17: Error Boundries  || 
 ||spectific component can be wrapped or top level component can be wrapped for error boundry 
- Error Boundries   catch js error anywhere in child component tree.log those erros 
+ Error Boundries   catch js error anywhere in child component tree and log those erros 
  
-A class component becomes a error boundy if it has one of the two lifecycle methods>.....
+A class component becomes a error boundry if it has one of the two lifecycle methods>.....
 Lifecycle methods to handle error
 *static getDerivedStateFromError() //render fall back UI after err thrown
 *componentDidCatch() //logs error info
+
+&&& --> Error div is shown(<b>Error Loading Default Address</b>) and then window error over laps it
 
 //Error boundry do not catch
 *event handler error (onclick,onchange)
@@ -214,12 +224,15 @@ Lifecycle methods to handle error
 *any async code (setTimeout)
 
 18:Fragments in React
-Every component class returns one container (div) || JSX expression must have one parent elemet
+Frangment let us group a list of children 
+without adding extra node to DOM (with out <div>)
+
+Every component class returns one container (div) || if div is removed -> error- > JSX expression must have one parent elemet
 
 This can be over come by React fragments
 <React.Fragment> </React.Fragment> or <> </>
 
-*fragment supporys one attribute (key attribute) which is used when mapping collection to array of component..
+*fragment supports one attribute (key attribute) which is used when mapping collection to array of component..
 
 19:Refs in React
 
@@ -231,7 +244,7 @@ Otherwise, set either `onChange` or `readOnly`. in input (at WithoutRefs.js:23)
 React.CreateRef();
 
 ** this.name.current.value  ||current.value is used to fetch the value using refs ||Note: we're accessing "current" to get the DOM node
-//video player example skippes
+//video player example skipped
 
 20:Refs continued // refs forwaring ||| too much doubts
 
@@ -243,6 +256,9 @@ Ref forwarding is a technique for automatically passing a ref through a componen
 21:Higher order components
 A Higher-Order component (HOC) is an advanced technique in React for reusing component logic
 Higher Order Components promote Code Reusability
+
+*** called two api ..both return list
+** list travelsal is made common & Api calling is made common
 
 //  Line 68:29:  Expected an assignment or function call and instead saw an expression  no-unused-expressions
 //chnage { to ( in map

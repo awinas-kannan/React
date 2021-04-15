@@ -252,7 +252,7 @@ const AppContextInteration = <App></App>
 
 const empListFC = <DisplayEmployeeList></DisplayEmployeeList>
 
-ReactDOM.render(empListFC, document.getElementById('root'));
+//ReactDOM.render(empListFC, document.getElementById('root'));
 
 //11.Rest Api call - window fetch
 
@@ -265,6 +265,7 @@ const restAddEmp = <SaveEmployee></SaveEmployee>
 //ReactDOM.render(restAddEmp, document.getElementById('root'));
 
 //13 -React Form , Spread operator
+//check console logs
 const empForm = <EmpForm></EmpForm>
 //ReactDOM.render(empForm, document.getElementById('root'));
 
@@ -318,7 +319,7 @@ const portalComp = <EmployeePortal />
 //23 Profiler
 const profiler = <ReportsDashboard></ReportsDashboard>
 
-//ReactDOM.render(profiler, document.getElementById("root"));
+ReactDOM.render(profiler, document.getElementById("root"));
 
 //24
 const renderProp = <RenderProp></RenderProp>

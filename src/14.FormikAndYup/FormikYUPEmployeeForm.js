@@ -15,7 +15,7 @@ export const FromikYUPForm = () => {
         validationSchema: YUP.object({
             name: YUP.string().max(10, 'Employee name should not be above 10 chars').required('Please enter Name'),
             age: YUP.string().required('Please enter Age'),
-            email: YUP.string().email('Invaild Email Address').required('Please enter Name')
+            email: YUP.string().email('Invaild Email Address').required('Please enter email')
         }),
         onSubmit: values => {
             alert(JSON.stringify(values));
