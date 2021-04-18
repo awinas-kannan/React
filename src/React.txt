@@ -484,7 +484,7 @@ To implement  navigation within the single page of our application, we use the c
 
 Routing enables navigation from one view to the next view (within the same page) as users perform different tasks.
 
-Browse Rouner
+Browse Router
 Link - > > anchor tag equivalent
 
 Route -> > based on the url in Link tag , correspoding Route tag ll be shown
@@ -520,10 +520,11 @@ If the directly entered is correct ,then that particular comp will be displayed 
 40::React Url params
 *Add edit button to each row and clicking on that show data in seperate component..
 
+http://localhost:3000/Employee/1
 /employee/:id :== dyamic url --> can be retrived in components using {props.match.params.id}
 
 41: React Nested Url 
-
+//http://localhost:3000/Employee/1
 check console.log(props) --  props: location, match, and history.
 
 42 :Programmatic navigation 
@@ -533,7 +534,7 @@ https://www.pragimtech.com/blog/reactjs/routing-part-6-in-react/
 History object has several properties and methods in it related to routing. One of the method is Push using which we can Push a new entry onto the history stack
 Replace- This method Replaces the current entry on the history stack. 
 
-Login with correct credentials -> hom comopnent next button (used replace method of history object)- > edit profile page will be displayed
+Login with correct credentials -> home comopnent next button (used replace method of history object)- > edit profile page will be displayed
 As we have used replace method, which replaces the history stack. Click on Back button, 
 one can observe that we have been navigated to the Login Component but not to home component. 
 
@@ -544,7 +545,7 @@ one can observe that we have been navigated to the Login Component but not to ho
 **When click in links : action ='PUSH'
 
 43 : Protected Routes
-
+**Will be navigated to HOME / EDIT only if the user islogged in
 {...data} contains Route  properties  (history ,location ,match ) .. @@@@@ check logs
 
 44 : Prevent Navigation
@@ -559,7 +560,7 @@ otherwise  if there are some unsaved changes it will prompt .. whether need to n
  OK or cancel .. Clicking on OK nav to other page. Cancel -> remains in the same page
  
 
- 45 :
+ 45 :Redux .... :(
 
 
 

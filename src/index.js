@@ -373,7 +373,7 @@ const multipleInputHandleThroughState = <><MultipleImputStateHandler /> </>
 
 //37 ,38 Router & switch component
 
-ReactDOM.render(<BrowserRouter><MyRouterComponent/></BrowserRouter>, document.getElementById("root"));
+//ReactDOM.render(<BrowserRouter><MyRouterComponent/></BrowserRouter>, document.getElementById("root"));
 
 //39 NavLink
 //ReactDOM.render(<BrowserRouter><MyNavRouterComponent/></BrowserRouter>, document.getElementById("root"));
@@ -393,7 +393,7 @@ ReactDOM.render(<BrowserRouter><MyRouterComponent/></BrowserRouter>, document.ge
 //ReactDOM.render(<BrowserRouter><ProgramaticNavigatorWithProtectedRoute/></BrowserRouter>, document.getElementById("root"));
 
 //44 Prevent Navigation
-//ReactDOM.render(<BrowserRouter><PreventNavigator/></BrowserRouter>, document.getElementById("root"));
+ReactDOM.render(<BrowserRouter><PreventNavigator/></BrowserRouter>, document.getElementById("root"));
 
 
 
