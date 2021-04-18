@@ -28,6 +28,7 @@ export function EmployeeUseEffectComponent() {
     console.log('Before return ' + document.readyState);
     return (
         <div>
+            {'inside return '+document.readyState}
             <h1>Hook : useEffect </h1>
             <style>{"table,th,tr,td{border:1px solid blue;}"}</style>
             <table>
@@ -45,6 +46,7 @@ export function EmployeeUseEffectComponent() {
                     )}
                 </tbody>
             </table>
+            
         </div>
     )
 }

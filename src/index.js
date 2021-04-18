@@ -338,7 +338,7 @@ const life = <ComponentLifeCycleMethods />
 //27 . Hooks ->useStates
 
 const stateManageMentwithClassComp = <><StateManageMentwithClassComp /> <UseStateHook /></>
-ReactDOM.render(stateManageMentwithClassComp, document.getElementById("root"));
+//ReactDOM.render(stateManageMentwithClassComp, document.getElementById("root"));
 
 //28 useStates
 const multipleInputHandleThroughState = <><MultipleImputStateHandler /> </>
@@ -367,13 +367,13 @@ const multipleInputHandleThroughState = <><MultipleImputStateHandler /> </>
 //35 custom Hooks
 //ReactDOM.render(<CustomHookAdminDashboard /> , document.getElementById("root"));
 
-//36
+//36 IMPORT custom hooks from NPM
 //ReactDOM.render(<SpeechConverter /> , document.getElementById("root"));
 
 
 //37 ,38 Router & switch component
 
-//ReactDOM.render(<BrowserRouter><MyRouterComponent/></BrowserRouter>, document.getElementById("root"));
+ReactDOM.render(<BrowserRouter><MyRouterComponent/></BrowserRouter>, document.getElementById("root"));
 
 //39 NavLink
 //ReactDOM.render(<BrowserRouter><MyNavRouterComponent/></BrowserRouter>, document.getElementById("root"));

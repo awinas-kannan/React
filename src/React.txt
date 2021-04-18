@@ -410,14 +410,14 @@ When the DOM is ready, we are sending the API request, getting the employees dat
 by calling setEmployees method. But this has a Problem. Remember that when there is any change in the properties data or state data of a component, 
 then that component gets re-rendered. 
 
-Resulting our useEffect function gets called again. It will send an API request,
+Resulting our useEffect function gets called again. It will send an API request again,
 get the data and assign it to employees state variable. That will make the component gets re-rendered and it will go into infinite loop. 
 
 If you want to run an effect only once (on mount and unmount), you can pass an empty array ([]) as a second argument. 
 This tells React that your effect doesn’t depend on any values from props or state, so it never needs to re-run.
 
 31:useEffect //  UseEffect with state dependency
-
+****when ever state value changes , useEffect should be called ***
 We can pass the state variable as a dependency to our useEffect hook.
 Our useEffect hook can have dependency on multiple state variables or properties as well.
 
