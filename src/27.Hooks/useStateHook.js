@@ -6,6 +6,9 @@ export function UseStateHook() {
     //if initial value is not assigned ,then above err will be in logs
     //const [stateFullName, setName] = useState();
 
+    //stateFullName -->State Property name {like this.state,stateFullName}
+    //setName --> function that modifies the property
+
     const [stateFullName, setName] = useState('awi');
 
     // changeName = (e) => {

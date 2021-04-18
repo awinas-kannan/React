@@ -319,7 +319,7 @@ const portalComp = <EmployeePortal />
 //23 Profiler
 const profiler = <ReportsDashboard></ReportsDashboard>
 
-ReactDOM.render(profiler, document.getElementById("root"));
+//ReactDOM.render(profiler, document.getElementById("root"));
 
 //24
 const renderProp = <RenderProp></RenderProp>
@@ -338,7 +338,7 @@ const life = <ComponentLifeCycleMethods />
 //27 . Hooks ->useStates
 
 const stateManageMentwithClassComp = <><StateManageMentwithClassComp /> <UseStateHook /></>
-//ReactDOM.render(stateManageMentwithClassComp, document.getElementById("root"));
+ReactDOM.render(stateManageMentwithClassComp, document.getElementById("root"));
 
 //28 useStates
 const multipleInputHandleThroughState = <><MultipleImputStateHandler /> </>

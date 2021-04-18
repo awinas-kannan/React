@@ -19,9 +19,10 @@ export class ComponentLifeCycleMethods extends React.Component {
 
     }
 
-    //Even after another component is rendered after count =5
+    //Even after another component is rendered after count =3
     //the setInterval method is called.
     //TO avoid this we nee to unmount setInterval
+    //uncomment componentWillUnmount to see this
     changeState = () => {
         alert('changeState')
         alert(this.state.count);

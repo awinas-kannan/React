@@ -302,6 +302,9 @@ A component with a render prop takes a function that returns a React element and
 **In both class components list are passed in different way .. one through props and other through state
 
 25:Pure Components // compared based on address not based on value
+Pure vs Mormal component :
+PureComponent will not be rendered again if state is set with same value again and again
+Noramal react component will be re rendered on each state chage, even the set value is same
 
 PureComponent is similar to Component.
 The difference between them is that Component doesn’t implement shouldComponentUpdate(), 
@@ -371,7 +374,7 @@ it is invoked immediately before a component is unmounted and destroyed.
 3. Confusing Classes	
 4. classes don’t minify very well
 
-**In normal funciton components we cannot maintain states , but in class components we can manage states.
+**In normal function components we cannot maintain states , but in class components we can manage states.
 
 Hooks are functions that let you “hook into” React state and lifecycle features from function components.
 Hooks don’t work inside classes — they let you use React without classes
