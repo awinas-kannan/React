@@ -2,8 +2,6 @@ import React from 'react';
 import { employeeContext } from './constants';
 import { Employee } from './Employee';
 
-
-
 export class App extends React.Component {
     constructor(props) {
         super(props);
