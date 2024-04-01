@@ -380,6 +380,9 @@ It is invoked immediately after a component is mounted (inserted into the tree)
 4componentWillUnmount() 
 it is invoked immediately before a component is unmounted and destroyed. 
 
+Order :
+
+constructor > render > componentDidMount -> shouldComponentUpdate (return true) -> render -> componentDidUpdate -> componentWillUnmount
 
 27: Hooks An alternate for components https://www.pragimtech.com/blog/reactjs/introduction-to-hooks-in-react/
 **Class compoents have several dis advatages .so hook were introduced in 16.8 version

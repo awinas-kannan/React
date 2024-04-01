@@ -300,12 +300,12 @@ const withRef = <WithReff />
 //
 
 const LoginUsingRefElem = <LoginUsingRef />
-ReactDOM.render(LoginUsingRefElem, document.getElementById('root'));
+// ReactDOM.render(LoginUsingRefElem, document.getElementById('root'));
 
 //20 Ref forward
 
 const refFrwdClasComp = <Elevator />
-//ReactDOM.render(refFrwdClasComp, document.getElementById('root'));
+// ReactDOM.render(refFrwdClasComp, document.getElementById('root'));
 
 //21/Higher Order components
 
@@ -323,7 +323,7 @@ const profiler = <ReportsDashboard></ReportsDashboard>
 
 //24
 const renderProp = <RenderProp></RenderProp>
-//ReactDOM.render(renderProp, document.getElementById("root"));
+// ReactDOM.render(renderProp, document.getElementById("root"));
 
 
 //25 Pure Component
@@ -332,7 +332,7 @@ const pureVsNormal = <PureVsNormalComp />
 
 //26 Life cycle Methods
 const life = <ComponentLifeCycleMethods />
-//ReactDOM.render(life, document.getElementById("root"));
+ReactDOM.render(life, document.getElementById("root"));
 
 
 //27 . Hooks ->useStates

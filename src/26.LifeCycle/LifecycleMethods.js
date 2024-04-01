@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { DisplayEmployeeList } from '../10.listInReact/DispEmployeeList';
 
 export class ComponentLifeCycleMethods extends React.Component {
-    stateChanger =null;
+    stateChanger = null;
     constructor() {
         super();
         alert('constructor');
@@ -15,7 +15,7 @@ export class ComponentLifeCycleMethods extends React.Component {
             },
             count: 0
         }
-        this.stateChanger=setInterval(this.changeState, 2000);
+        this.stateChanger = setInterval(this.changeState, 2000);
 
     }
 
@@ -42,6 +42,26 @@ export class ComponentLifeCycleMethods extends React.Component {
         clearInterval(this.stateChanger);
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        alert('shouldComponentUpdate');
+        console.log({ nextState, nextProps });
+        // Check if the count is divisible by 2
+
+
+        // if (nextState.count % 2 === 0) {
+        //     return true; // Allow re-render if count is even
+        // }
+        // return false; // Prevent re-render if count is odd
+        return true;
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        // Log a message whenever the count updates
+        alert('componentDidUpdate');
+        console.log({ prevState, prevProps });
+        console.log(`Count updated from ${prevState.count} to ${this.state.count}`);
+    }
+
     componentDidMount() {
         alert('componentDidMount')
         this.changeState();
@@ -52,6 +72,7 @@ export class ComponentLifeCycleMethods extends React.Component {
         return (
 
             < div >
+                {alert('Inside Return IN render')}
                 <h1>Life Cycle Methods</h1>
             </div >
         )
