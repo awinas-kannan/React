@@ -117,6 +117,10 @@ increaseCounter=()=>
      alert('Increased value = ' + this.counter);
    }
 
+State is used to manage component-specific data and its changes over time.
+State is typically local to a component and is managed using the useState hook or by extending React.Component with class components.
+State is best suited for managing data that is specific to a single component and doesn't need to be shared with other components.
+State is re-rendered whenever it changes, triggering updates to the component's UI.
 
  7:Interaction between component
  Ui may consis of multiplle components.One component interactiong with other
@@ -137,6 +141,11 @@ data can be passed to components that are descendents of this provider
 
 *Descendents of provider will render whenever the provider values changes
 
+
+
+In summary, the decision between using state and context depends on the scope and nature of the data you need to manage. 
+If the data is specific to a single component, use state. If the data needs to be accessed by multiple components, 
+use context to share it across the component tree.
 
  9:
  changin state value of parent from child using context
@@ -222,6 +231,11 @@ Lifecycle methods to handle error
 *event handler error (onclick,onchange)
 *server side rendering code
 *any async code (setTimeout)
+
+ErrorBoundary(CustomErrorHandler) is a custom component that implements componentDidCatch.
+If an error occurs during the rendering of any of its child components, componentDidCatch will be called, updating the state to indicate that an error occurred.
+The render method of ErrorBoundary(CustomErrorHandler) checks if an error occurred. If so, it renders a fallback UI. Otherwise, it renders the child components as usual.
+
 
 18:Fragments in React
 Frangment let us group a list of children 

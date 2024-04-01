@@ -258,11 +258,11 @@ const empListFC = <DisplayEmployeeList></DisplayEmployeeList>
 
 
 const restShowEmp = <ShowAllEmployees></ShowAllEmployees>
-//ReactDOM.render(restShowEmp, document.getElementById('root'));
+// ReactDOM.render(restShowEmp, document.getElementById('root'));
 
 //12 -Rest Post  Save employee
 const restAddEmp = <SaveEmployee></SaveEmployee>
-//ReactDOM.render(restAddEmp, document.getElementById('root'));
+// ReactDOM.render(restAddEmp, document.getElementById('root'));
 
 //13 -React Form , Spread operator
 //check console logs
@@ -285,22 +285,22 @@ const empFormikCompYUPForm = <FromikComponentForm />
 
 //16 Lifting state 17 Error boudires 18 fragments
 const fkart = <FlipKart />
-//ReactDOM.render(fkart, document.getElementById('root'));
+// ReactDOM.render(fkart, document.getElementById('root'));
 
 
 //19 Refs
 //componenet rendered on each button click
 const withoutRef = <WithoutReff />
-//ReactDOM.render(withoutRef, document.getElementById('root'));
+// ReactDOM.render(withoutRef, document.getElementById('root'));
 
 //component rendered only once
 const withRef = <WithReff />
-//ReactDOM.render(withRef, document.getElementById('root'));
+// ReactDOM.render(withRef, document.getElementById('root'));
 
 //
 
 const LoginUsingRefElem = <LoginUsingRef />
-//ReactDOM.render(LoginUsingRefElem, document.getElementById('root'));
+ReactDOM.render(LoginUsingRefElem, document.getElementById('root'));
 
 //20 Ref forward
 
@@ -393,7 +393,7 @@ const multipleInputHandleThroughState = <><MultipleImputStateHandler /> </>
 //ReactDOM.render(<BrowserRouter><ProgramaticNavigatorWithProtectedRoute/></BrowserRouter>, document.getElementById("root"));
 
 //44 Prevent Navigation
-ReactDOM.render(<BrowserRouter><PreventNavigator/></BrowserRouter>, document.getElementById("root"));
+// ReactDOM.render(<BrowserRouter><PreventNavigator/></BrowserRouter>, document.getElementById("root"));
 
 
 

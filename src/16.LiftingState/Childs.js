@@ -36,11 +36,14 @@ export class CustomErrorHandler extends React.Component {
 export class DefaultAddressOfUser extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            data: null
+        };
     }
 
     render() {
-       //throw new Error('Unabe to Fetch Default Address .. Type your new Address');
-       return '4/579 A , Madurai-625009.'
+        //    throw new Error('Unabe to Fetch Default Address .. Type your new Address');
+        return '4/579 A , Madurai-625009.'
     }
 
 }
