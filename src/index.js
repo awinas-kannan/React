@@ -41,6 +41,7 @@ import EmployeeDashboard from './components/EmployeeDashboard';
 import './index.css';
 // import App from './App';
 import * as serviceWorker from './serviceWorker';
+import UseEffectLifeCycle from './30.UseEffect/UseEffectLifecyle';
 
 /////WITH JSX
 
@@ -332,26 +333,28 @@ const pureVsNormal = <PureVsNormalComp />
 
 //26 Life cycle Methods
 const life = <ComponentLifeCycleMethods />
-ReactDOM.render(life, document.getElementById("root"));
+// ReactDOM.render(life, document.getElementById("root"));
 
 
 //27 . Hooks ->useStates
 
 const stateManageMentwithClassComp = <><StateManageMentwithClassComp /> <UseStateHook /></>
-//ReactDOM.render(stateManageMentwithClassComp, document.getElementById("root"));
+// ReactDOM.render(stateManageMentwithClassComp, document.getElementById("root"));
 
 //28 useStates
 const multipleInputHandleThroughState = <><MultipleImputStateHandler /> </>
-//ReactDOM.render(multipleInputHandleThroughState, document.getElementById("root"));
+// ReactDOM.render(multipleInputHandleThroughState, document.getElementById("root"));
 
 //29 share state between parent and child using use state
 
-//ReactDOM.render(<><EmployeeUseState /> </>, document.getElementById("root"));
+// ReactDOM.render(<><EmployeeUseState /> </>, document.getElementById("root"));
 
 //30 UseEffect
 
 
-//ReactDOM.render(<EmployeeUseEffectComponent /> , document.getElementById("root"));
+// ReactDOM.render(<EmployeeUseEffectComponent /> , document.getElementById("root"));
+ReactDOM.render(<UseEffectLifeCycle /> , document.getElementById("root"));
+
 
 //31 useEffect with state dependency
 //ReactDOM.render(<EmployeeUseEffectWithSateDependency /> , document.getElementById("root"));

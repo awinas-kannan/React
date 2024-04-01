@@ -433,6 +433,18 @@ get the data and assign it to employees state variable. That will make the compo
 If you want to run an effect only once (on mount and unmount), you can pass an empty array ([]) as a second argument. 
 This tells React that your effect doesn’t depend on any values from props or state, so it never needs to re-run.
 
+$$$$$$$$$$$$  Use Effect (Functional Components) vs React Lifecyle methods (Class Components) $$$$$$$$$$$$
+
+useEffect (with no values []) -> componentWillMount
+componentDidUpdate -> useEffect with [name]
+componentWillUnmount -> return fucntion in useEffect
+UseEffectLifeCycle.js
+
+useEffect with an empty dependency array is equivalent to componentDidMount, as it runs only once after the component is mounted.
+useEffect with a dependency array [count] is equivalent to componentDidUpdate, as it runs after every update where count changes.
+The cleanup function in the first useEffect is equivalent to componentWillUnmount, as it runs when the component is about to unmount.
+
+
 31:useEffect //  UseEffect with state dependency
 ****when ever state value changes , useEffect should be called ***
 We can pass the state variable as a dependency to our useEffect hook.
