@@ -617,6 +617,15 @@ To this createStore, We have to provide a function that will return the state da
 In short, reducer is a function that takes the current state, and an action, and returns the newState
 
 
+ the react-redux library comes with 2 things: a component called Provider, and a function called connect.
+
+By wrapping the entire app with the Provider component, every component in the app tree will be able to access the Redux store if it wants to.
+
+After this, Employee Component, and children of Employee, and children of their children, and so on – all of them can now access the Redux store.
+
+But not automatically. We’ll need to use the connect function on our components to access the store.
+
+
 
 
 
