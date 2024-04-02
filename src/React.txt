@@ -590,7 +590,31 @@ otherwise  if there are some unsaved changes it will prompt .. whether need to n
  
 
  45 :Redux .... :(
+ https://www.pragimtech.com/blog/reactjs/redux-in-react/
 
+ npm install –save redux react-redux
+
+ State management is absolutely critical in a Web Application Development. 
+
+
+ State contains data specific to a given component that may change over time. 
+
+Using Context, we pass the data from parent component to Child component and from Child to Parent which are placed at different nesting levels.
+
+For low-frequency updates like locale or theme changes or user authentication, the React Context is perfectly fine. But with a more complex state object like products in the shopping cart which has high-frequency updates, the React Context won't be a good solution. Because, the React Context will trigger a re-render on each update, and optimizing it manually can be really tough. 
+
+
+Redux provides a solid, stable and mature solution to managing state in your React application.
+
+If we have components that are siblings and need to share data, the way to do that in React is to pull that data up into a parent component and pass it down with props.
+
+That can be cumbersome though. Redux can help by giving you one global “parent” where you can store the data, and then you can connect the sibling components to the data with React-Redux.
+
+Redux comes with a handy function that creates stores, and it’s called createStore.
+
+To this createStore, We have to provide a function that will return the state data based on the action user performs. This function takes two parameters, one is the state data and the other one is action. That function is called a reducer in Redux terminology.
+
+In short, reducer is a function that takes the current state, and an action, and returns the newState
 
 
 

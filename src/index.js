@@ -353,11 +353,11 @@ const multipleInputHandleThroughState = <><MultipleImputStateHandler /> </>
 
 
 // ReactDOM.render(<EmployeeUseEffectComponent /> , document.getElementById("root"));
-ReactDOM.render(<UseEffectLifeCycle /> , document.getElementById("root"));
+// ReactDOM.render(<UseEffectLifeCycle /> , document.getElementById("root"));
 
 
 //31 useEffect with state dependency
-//ReactDOM.render(<EmployeeUseEffectWithSateDependency /> , document.getElementById("root"));
+ReactDOM.render(<EmployeeUseEffectWithSateDependency /> , document.getElementById("root"));
 
 //32 useEffect for unmounting
 
