@@ -45,6 +45,7 @@ import UseEffectLifeCycle from './30.UseEffect/UseEffectLifecyle';
 import { ReduxComponent } from './45.Redux/ReduxComponent';
 import { ReactResp } from './ReactResponsiveTest/ReactResp';
 import ReactRespPassAcrossComp from './ReactResponsiveTest/ReactRespPassAcrossComp';
+import InlineMediaQuery from './Misc/InlineMediaQuery';
 
 /////WITH JSX
 
@@ -415,7 +416,10 @@ const multipleInputHandleThroughState = <><MultipleImputStateHandler /> </>
 
 // ReactDOM.render(<ReactResp></ReactResp>, document.getElementById("root"));
 
-ReactDOM.render(<ReactRespPassAcrossComp></ReactRespPassAcrossComp>, document.getElementById("root"));
+// ReactDOM.render(<ReactRespPassAcrossComp></ReactRespPassAcrossComp>, document.getElementById("root"));
+
+ReactDOM.render(<InlineMediaQuery/>, document.getElementById("root"));
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
