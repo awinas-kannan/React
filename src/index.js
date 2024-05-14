@@ -42,6 +42,9 @@ import './index.css';
 // import App from './App';
 import * as serviceWorker from './serviceWorker';
 import UseEffectLifeCycle from './30.UseEffect/UseEffectLifecyle';
+import { ReduxComponent } from './45.Redux/ReduxComponent';
+import { ReactResp } from './ReactResponsiveTest/ReactResp';
+import ReactRespPassAcrossComp from './ReactResponsiveTest/ReactRespPassAcrossComp';
 
 /////WITH JSX
 
@@ -357,7 +360,7 @@ const multipleInputHandleThroughState = <><MultipleImputStateHandler /> </>
 
 
 //31 useEffect with state dependency
-ReactDOM.render(<EmployeeUseEffectWithSateDependency /> , document.getElementById("root"));
+// ReactDOM.render(<EmployeeUseEffectWithSateDependency /> , document.getElementById("root"));
 
 //32 useEffect for unmounting
 
@@ -376,7 +379,7 @@ ReactDOM.render(<EmployeeUseEffectWithSateDependency /> , document.getElementByI
 
 //37 ,38 Router & switch component
 
-//ReactDOM.render(<BrowserRouter><MyRouterComponent/></BrowserRouter>, document.getElementById("root"));
+// ReactDOM.render(<BrowserRouter><MyRouterComponent/></BrowserRouter>, document.getElementById("root"));
 
 //39 NavLink
 //ReactDOM.render(<BrowserRouter><MyNavRouterComponent/></BrowserRouter>, document.getElementById("root"));
@@ -387,7 +390,7 @@ ReactDOM.render(<EmployeeUseEffectWithSateDependency /> , document.getElementByI
 
 
 //41 Nested Url 
-//ReactDOM.render(<BrowserRouter><DynamicAndNestedUrlRouterComponent/></BrowserRouter>, document.getElementById("root"));
+// ReactDOM.render(<BrowserRouter><DynamicAndNestedUrlRouterComponent/></BrowserRouter>, document.getElementById("root"));
 
 //42 Programmatic Navigation
 //ReactDOM.render(<BrowserRouter><ProgramaticNavigator/></BrowserRouter>, document.getElementById("root"));
@@ -399,8 +402,20 @@ ReactDOM.render(<EmployeeUseEffectWithSateDependency /> , document.getElementByI
 // ReactDOM.render(<BrowserRouter><PreventNavigator/></BrowserRouter>, document.getElementById("root"));
 
 
+// 45 Redux...
+
+// Not Working
+
+// ReactDOM.render(<ReduxComponent></ReduxComponent>, document.getElementById("root"));
+
+//
 
 
+///////////////////////////////////////////////////////////////////////////
+
+// ReactDOM.render(<ReactResp></ReactResp>, document.getElementById("root"));
+
+ReactDOM.render(<ReactRespPassAcrossComp></ReactRespPassAcrossComp>, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

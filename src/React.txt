@@ -625,6 +625,16 @@ After this, Employee Component, and children of Employee, and children of their 
 
 But not automatically. We’ll need to use the connect function on our components to access the store.
 
+* Store
+* Action
+* Reducer
+* Connect
+
+
+
+****************************
+
+React Responsive : https://www.npmjs.com/package/react-responsive
 
 
 
